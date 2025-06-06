@@ -1,1 +1,38 @@
 include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - lib/**.g.dart
+    - lib/**.swagger.dart
+    - lib/**.chopper.dart
+
+  language:
+    strict-raw-types: false
+  errors:
+    unawaited_futures: error
+    await_only_futures: error
+    avoid_void_async: error
+    unnecessary_await_in_return: error
+    must_be_immutable: error
+    must_call_super: error
+
+linter:
+  rules:
+    cancel_subscriptions: true
+    camel_case_types: true
+    require_trailing_commas: true
+    avoid_positional_boolean_parameters: true
+    prefer_constructors_over_static_methods: true
+    constant_identifier_names: false
+    avoid_renaming_method_parameters: false
+    unawaited_futures: true
+    await_only_futures: true
+    unnecessary_await_in_return: true
+    avoid_void_async: true
+    prefer_single_quotes: true
+    avoid_relative_lib_imports: true
+    public_member_api_docs: false
+    sort_constructors_first: false
+    prefer_final_locals: true
+    library_prefixes: false

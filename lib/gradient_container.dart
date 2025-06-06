@@ -1,26 +1,30 @@
+import 'package:dado_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
+const startAligment = Alignment.topLeft;
+const endAligment = Alignment.bottomRight;
+
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
+          colors: const [
             Color.fromARGB(255, 78, 207, 250),
             Color.fromARGB(255, 122, 103, 218),
           ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          begin: startAligment,
+          end: endAligment,
         ),
       ),
-      child: const Center(
-        child: Text(
-          'Dado App is coming soon!',
-          style: TextStyle(color: Colors.white, fontSize: 30),
-        ),
+      child: Center(
+        child: StyledText('Dado App is coming soon!'),
       ),
     );
   }
