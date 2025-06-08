@@ -1,3 +1,4 @@
+import 'package:dado_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 const startAligment = Alignment.topLeft;
@@ -7,14 +8,16 @@ class GradientContainer extends StatelessWidget {
   const GradientContainer(this.color1, this.color2, {super.key});
 
   const GradientContainer.purple({super.key})
-      : color1 = const Color.fromARGB(255, 78, 207, 250),
-        color2 = const Color.fromARGB(255, 122, 103, 218);
+      : color1 = Colors.cyan,
+        color2 = Colors.deepPurple;
+  //  color1 =  Color.aqua,
+  //  color2 = const Color.lightPurple;
 
   final Color color1;
   final Color color2;
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -24,11 +27,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-1.png',
-          width: 200,
-          height: 200,
-        ),
+        child: DiceRoller(),
       ),
     );
   }

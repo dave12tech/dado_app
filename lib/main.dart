@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
-
 import 'package:dado_app/gradient_container.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
         body: GradientContainer(
           Color.fromARGB(255, 78, 207, 250),
